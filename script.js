@@ -3,8 +3,8 @@ const pixelBoard = document.querySelector('#pixel-board');
 const eraser = document.querySelector('#clear-board');
 const boardSize = document.querySelector('#board-size');
 const generateBoard = document.querySelector('#generate-board');
-const colorSelected = [`${randomColors()}`, `${randomColors()}`, `${randomColors()}`];
 let n1 = 5;
+const randomizing = document.querySelector('#random-collors');
 
 // Cria as divs da paleta de cores para selecionar a cor para pintar
 function createPaletteDivs () {
@@ -21,7 +21,7 @@ function createPaletteDivs () {
 			div.className = 'color';
 			colorPalette.appendChild(div);
 			div = document.querySelector('#color-palette').lastElementChild;
-			div.style.backgroundColor = colorSelected[index - 1];
+			div.style.backgroundColor = randomColors();
 		}
 
 	}
@@ -164,14 +164,93 @@ boardSize.addEventListener('keypress', (event) => {
 })
 
 // Gera cores hexadecimais aleatórias
+// function randomColors () {
+// 	let abc = 'ABCDEF';
+// 	let letter1 = abc[Math.floor(Math.random() * 6)];
+// 	let numbers1 = Math.floor(Math.random() * 10);
+// 	let letter2 = abc[Math.floor(Math.random() * 6)];
+// 	let numbers2 = Math.floor(Math.random() * 10);
+// 	let letter3 = abc[Math.floor(Math.random() * 6)];
+// 	let numbers3 = Math.floor(Math.random() * 10);
+// 	let color = `#${letter1}${numbers1}${letter2}${numbers2}${letter3}${numbers3}`;
+// 	return color;
+// }
+
+// Cria cor aleatória no formato rgb(xxx, xxx, xxx)
 function randomColors () {
-	let abc = 'ABCDEF';
-	let letter1 = abc[Math.floor(Math.random() * 6)];
-	let numbers1 = Math.floor(Math.random() * 10);
-	let letter2 = abc[Math.floor(Math.random() * 6)];
-	let numbers2 = Math.floor(Math.random() * 10);
-	let letter3 = abc[Math.floor(Math.random() * 6)];
-	let numbers3 = Math.floor(Math.random() * 10);
-	let color = `#${letter1}${numbers1}${letter2}${numbers2}${letter3}${numbers3}`;
-	return color;
+	let number1;
+	let number2;
+	let number3;
+	let n2;
+	let n3;
+
+	for (let index = 0; index < 3; index++) {
+	let n1 = Math.floor(Math.random() * 3);
+		if (n1 == 2) {
+			n2 = Math.floor(Math.random() * 6);
+		} else {
+			n2 = Math.floor(Math.random() * 10);
+		}
+		if (n1 == 2 && n2 == 5) {
+			n3 = Math.floor(Math.random() * 1);
+		} else {
+			n3 = Math.floor(Math.random() * 10);
+		}
+		if (index == 0) {
+			if (n1 == 0) {
+				if (n2 == 0) {
+					if (n3 == 0) {
+						number1 = '0';
+					} else {
+						number1 = `${n3}`;
+					}
+				} else {
+					number1 = `${n2}${n3}`;
+				}
+			} else {
+				number1 = `${n1}${n2}${n3}`;
+			}
+		} else if (index == 1) {
+			if (n1 == 0) {
+				if (n2 == 0) {
+					if (n3 == 0) {
+						number2 = '0';
+					} else {
+						number2 = `${n3}`;
+					}
+				} else {
+					number2 = `${n2}${n3}`;
+				}
+			} else {
+				number2 = `${n1}${n2}${n3}`;
+			}
+		} else {
+			if (n1 == 0) {
+				if (n2 == 0) {
+					if (n3 == 0) {
+						number3 = '0';
+					} else {
+						number3 = `${n3}`;
+					}
+				} else {
+					number3 = `${n2}${n3}`;
+				}
+			} else {
+				number3 = `${n1}${n2}${n3}`;
+			}
+		}
+	}
+
+	let codigoRGB = `rgb(${number1}, ${number2}, ${number3})`;
+	return codigoRGB;
 }
+
+// Adiciona a possibilidade de randomizar as cores sem recarregar a página
+randomizing.addEventListener('click', () => {
+  let colorsOfPalette = document.querySelectorAll('.color');
+  for (let index = 0; index < colorsOfPalette.length; index++) {
+    if (index != 0) {
+      colorsOfPalette[index].style.backgroundColor = randomColors();
+    }
+  }
+})
