@@ -14,30 +14,37 @@ body {
 header {
   background-color: #333;
   color: aliceblue;
+  text-align: center;
+  text-shadow: 6px 6px black;
 }
 
 .header1 {
-  text-align: center;
-  font-size: xx-large;
+  font-size: 70px;
+  padding: 10px;
 }
 
 main {
-  background-color: tomato;
   padding: 10px;
   line-height: 0;
+  text-align: center;
+  white-space: nowrap;
+  overflow-y: auto;
+  overflow-x: auto;
 }
 
 footer {
   background-color: #333;
   color: aliceblue;
+  padding: 50px;
 }
 
 .palette-name {
-  background-color: aqua;
+  font-size: 28px;
+  padding: 5px;
 }
 
 #color-palette {
-  background-color: bisque;
+  padding: 40px;
 }
 
 .color {
@@ -46,6 +53,8 @@ footer {
   width: 50px;
   display: inline-block;
   cursor: pointer;
+  border-radius: 50%;
+  margin: 0 5px;
 }
 
 .pixel {
@@ -57,20 +66,40 @@ footer {
   cursor: pointer;
 }
 
-.td {
-}
-
 .butao {
   padding: 10px;
   background-color: white;
   color: rgb(0, 0, 0);
   border: solid 2px;
-  border-color: rgb(38, 0, 255);
+  border-color: rgb(0, 0, 0);
   border-radius: 10px;
+  margin: 10px;
 }
 
 .butao:hover {
   background-color: rgb(0, 0, 0);
+  border-color: rgb(38, 0, 255);
   color: white;
   cursor: pointer;
+}
+
+#myContact {
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#contactsMine ul {
+  list-style: none;
+}
+
+#contactsMine {
+  text-align: center;
+}
+
+#contactsMine ul li {
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  margin: 0 20px;
 }
