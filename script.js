@@ -151,15 +151,15 @@ generateBoard.addEventListener('click', () => {
 // Altera o tamanho do quadro para ser pintado através do enter
 boardSize.addEventListener('keypress', (event) => {
 	if (event.keyCode == 13) {
-    if (boardSize.value === '') {
-      alert('Board inválido!');
-    } else {
-      n1 = boardSize.value;
-      boardSize.value = '';
-      pixelBoard.innerText = '';
-      createMainDivs();
-      paintingBoard();
-    }
+  	if (boardSize.value === '') {
+	    alert('Board inválido!');
+	  } else {
+	    n1 = boardSize.value;
+	    boardSize.value = '';
+	    pixelBoard.innerText = '';
+	    createMainDivs();
+	    paintingBoard();
+	  }
 	}
 })
 
