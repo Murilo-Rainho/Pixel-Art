@@ -14,7 +14,7 @@
 
 This project was made during my first week in the second month on the Trybe Course. Me, without knowledge before the course, **with two month of course**, was able to use some basic knowledge about HTML, CSS and JavaScript.
 
---
+---
 
 ### what is the site for?
 
