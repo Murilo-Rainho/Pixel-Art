@@ -72,6 +72,8 @@ createMainDivs ();
 // Adiciona o evento de selecionar a cor ao clicar numa cor da paleta de cores
 const colorDiv = document.querySelectorAll('.color');
 
+console.log(colorDiv[1]);
+
 colorDiv[0].addEventListener('click', () => {
 	let selected = document.querySelector('.selected');
 	selected.classList.remove('selected');

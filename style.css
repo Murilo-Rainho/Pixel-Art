@@ -23,9 +23,12 @@ header {
 
 .palette-name {
   display: inline-block;
-  font-size: 28px;
   padding: 5px;
   width: 50%;
+}
+
+h2 {
+  font-size: 40px;
 }
 
 .butao {
