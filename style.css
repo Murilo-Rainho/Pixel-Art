@@ -1,14 +1,12 @@
 * {
+  border: 0;
   margin: 0;
   padding: 0;
-  border: 0;
 }
 
 body {
   background-color: rgb(77, 77, 77);
-}
-
-.container {
+  min-height: 100vh;
 }
 
 header {
@@ -23,57 +21,24 @@ header {
   padding: 10px;
 }
 
-main {
-  padding: 10px;
-  line-height: 0;
-  text-align: center;
-  white-space: nowrap;
-  overflow-y: auto;
-  overflow-x: auto;
-}
-
-footer {
-  background-color: #333;
-  color: aliceblue;
-  padding: 50px;
-}
-
 .palette-name {
-  font-size: 28px;
+  display: inline-block;
   padding: 5px;
+  width: 50%;
 }
 
-#color-palette {
-  padding: 40px;
-}
-
-.color {
-  border: black solid 1px;
-  height: 50px;
-  width: 50px;
-  display: inline-block;
-  cursor: pointer;
-  border-radius: 50%;
-  margin: 0 5px;
-}
-
-.pixel {
-  border: black solid 1px;
-  background-color: white;
-  height: 40px;
-  width: 40px;
-  display: inline-block;
-  cursor: pointer;
+h2 {
+  font-size: 40px;
 }
 
 .butao {
-  padding: 10px;
   background-color: white;
-  color: rgb(0, 0, 0);
   border: solid 2px;
   border-color: rgb(0, 0, 0);
   border-radius: 10px;
+  color: rgb(0, 0, 0);
   margin: 10px;
+  padding: 10px;
 }
 
 .butao:hover {
@@ -83,23 +48,63 @@ footer {
   cursor: pointer;
 }
 
-#myContact {
-  font-size: 30px;
-  text-align: center;
-  padding-bottom: 20px;
+#color-palette {
+  padding: 40px;
 }
 
-#contactsMine ul {
-  list-style: none;
+.color {
+  border: black solid 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  height: 50px;
+  margin: 0 5px;
+  width: 50px;
+}
+
+main {
+  line-height: 0;
+  margin-top: 35px;
+  overflow-x: auto;
+  overflow-y: auto;
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.pixel {
+  background-color: white;
+  border: black solid 1px;
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+footer {
+  background-color: #333;
+  color: aliceblue;
+  margin-top: 35px;
+  padding: 50px;
+}
+
+#myContact {
+  font-size: 30px;
+  padding-bottom: 20px;
+  text-align: center;
 }
 
 #contactsMine {
   text-align: center;
 }
 
+#contactsMine ul {
+  list-style: none;
+}
+
 #contactsMine ul li {
+  display: inline-block;
   font-size: 20px;
   font-weight: bold;
-  display: inline-block;
   margin: 0 20px;
 }

@@ -72,6 +72,8 @@ createMainDivs ();
 // Adiciona o evento de selecionar a cor ao clicar numa cor da paleta de cores
 const colorDiv = document.querySelectorAll('.color');
 
+console.log(colorDiv[1]);
+
 colorDiv[0].addEventListener('click', () => {
 	let selected = document.querySelector('.selected');
 	selected.classList.remove('selected');
@@ -151,15 +153,15 @@ generateBoard.addEventListener('click', () => {
 // Altera o tamanho do quadro para ser pintado através do enter
 boardSize.addEventListener('keypress', (event) => {
 	if (event.keyCode == 13) {
-    if (boardSize.value === '') {
-      alert('Board inválido!');
-    } else {
-      n1 = boardSize.value;
-      boardSize.value = '';
-      pixelBoard.innerText = '';
-      createMainDivs();
-      paintingBoard();
-    }
+  	if (boardSize.value === '') {
+	    alert('Board inválido!');
+	  } else {
+	    n1 = boardSize.value;
+	    boardSize.value = '';
+	    pixelBoard.innerText = '';
+	    createMainDivs();
+	    paintingBoard();
+	  }
 	}
 })
 
